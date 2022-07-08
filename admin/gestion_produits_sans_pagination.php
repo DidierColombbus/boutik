@@ -26,7 +26,7 @@ require_once("../inc/init.php");
     }
     
     // Afficher les données dans un tableau
-    // Faudra rajouter deux colones (modification/suppresion)
+    // Faudra rajouter deux colonnes (modification/suppresion)
     // 2 événements post : modif et suppresion
 
     // En dessous du tableau on va avoir un formulaire qui va permettre deux choses : ajouter un produit / modifier
@@ -75,7 +75,7 @@ require_once("../inc/init.php");
         //////////// TRAITEMENT DE L'INPUT TYPE FILE ////////////////
         ////////////////////////////////////////////
 
-        // Permet d'échapper les caractères succeptibles de crééer des erreurs sql
+        // Permet d'échapper les caractères succeptibles de créer des erreurs sql
         foreach($_POST as $indice => $valeur) {
             $_POST[$indice] = addslashes($valeur);
         }

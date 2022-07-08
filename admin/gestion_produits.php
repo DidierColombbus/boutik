@@ -36,8 +36,8 @@ require_once("../inc/init.php");
 
     
     // Afficher les données dans un tableau
-    // Faudra rajouter deux colones (modification/suppresion)
-    // 2 événements post : modif et suppresion
+    // Faudra rajouter deux colonnes (modification/suppresion)
+    // 2 évènements post : modif et suppresion
 
     // En dessous du tableau on va avoir un formulaire qui va permettre deux choses : ajouter un produit / modifier
 
@@ -186,12 +186,12 @@ require_once("inc/header.php");
 
 <!-- BODY -->
 
-<h1 class='mb-5 text-center'>Bienvenue dans la partie gestion de produits de votre backOffice</h1>
+<h1 class='mb-5 text-center'>Bienvenue dans la partie gestion de produits de votre Back-office</h1>
 
 
 <!-- TABLE -->
 
-<p>Vos produits en BDD:</p>
+<p>Vos produits en BDD :</p>
 
 <?php echo $content; ?>
 
@@ -207,8 +207,8 @@ require_once("inc/header.php");
     </tr>
   </thead>
   <tbody>
-        <!-- J'itère dans le fetchAll qui m'index dans un tableau multidimensionnel les arrays contenants mes produits
-        Pour chaque array de produit récupéré j'itère dans les index pour récupérer les valeurs et générer un td pour chaque valeur  -->
+        <!-- J'itère dans le fetchAll qui m'indèxe dans un tableau multidimensionnel les arrays contenants mes produits
+        Pour chaque array de produit récupéré, j'itère dans les index pour récupérer les valeurs et générer un td pour chaque valeur  -->
         <?php foreach($stmt->fetchAll(PDO::FETCH_ASSOC) as $index => $produit) { ?>
             <tr>
                 <?php foreach($produit as $index => $valeur) { 
@@ -234,7 +234,7 @@ require_once("inc/header.php");
     <ul class="pagination">
 
         <li class="page-item <?php echo ($elementsPourLaPagination["pageEnCours"] == 1) ? "disabled" : ""; ?>">
-            <a class="page-link" href="?page=<?php echo $elementsPourLaPagination["pageEnCours"] - 1; ?>">Previous</a>
+            <a class="page-link" href="?page=<?php echo $elementsPourLaPagination["pageEnCours"] - 1; ?>">Précédent</a>
         </li>
 
         <?php for($page = 1; $page <= $elementsPourLaPagination["pages"]; $page++) { ?>
@@ -244,7 +244,7 @@ require_once("inc/header.php");
         <?php } ?>
 
         <li class="page-item <?php echo ($elementsPourLaPagination["pageEnCours"] == $elementsPourLaPagination["pages"]) ? "disabled" : ""; ?>">
-            <a class="page-link" href="?page=<?php echo $elementsPourLaPagination["pageEnCours"] + 1; ?>">Next</a>
+            <a class="page-link" href="?page=<?php echo $elementsPourLaPagination["pageEnCours"] + 1; ?>">Suivant</a>
         </li>
     </ul>
     </nav>
@@ -258,11 +258,11 @@ require_once("inc/header.php");
     <input type="hidden" name="prevPhoto" value="<?php echo $photo; ?>">
     <div class="form-row">
         <div class="form-group col-md-3">
-            <label for="reference">Reference</label>
+            <label for="reference">Référence</label>
             <input type="text" class="form-control" id="reference" name="reference" value="<?= $reference; ?>">
         </div>
         <div class="form-group col-md-3">
-            <label for="categorie">Categorie</label>
+            <label for="categorie">Catégorie</label>
             <input type="text" class="form-control" id="categorie" name="categorie" value="<?= $categorie; ?>">
         </div>
         <div class="form-group col-md-3">
@@ -287,7 +287,7 @@ require_once("inc/header.php");
         </div>
         <div class="w-100"></div>
 
-        <!-- FAIRE VARIABLED LE SELECTED DES INPUTS -->
+        <!-- FAIRE VARIER LE SELECTED DES INPUTS -->
 
         <div class="form-group col-md-2">
             <label for="public_m">Public</label>

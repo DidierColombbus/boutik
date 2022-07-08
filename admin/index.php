@@ -10,7 +10,7 @@ require_once("inc/header.php");
 <!-- BODY -->
 
 <h1 class='mb-5 text-center'>Bienvenue dans l'accueil de votre back-office</h1>
-<p>Séléctionnez l'une des rubriques dans le menu de navigation</p>
+<p>Sélectionnez l'une des rubriques dans le menu de navigation</p>
 
 
 <?php
