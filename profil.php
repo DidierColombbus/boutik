@@ -1,7 +1,7 @@
 <?php
 require_once("inc/init.php");
 
-// SI je ne suis pas connecté je suis redirigé vers la page de connexions
+// Si je ne suis pas connecté je suis redirigé vers la page de connexion
 
 if(!internauteEstConnecte()) {
     header("location:connexion.php");
@@ -25,7 +25,7 @@ require_once("inc/header.php");
         <?php if($_SESSION["membre"]["civilite"] == "m") { ?>
             <h2 class="text-center mb-5">Bonjour Mr <?= $_SESSION["membre"]["prenom"] . " " . $_SESSION["membre"]["nom"] ?>, bienvenue sur votre espace personnel !</h2>
         <?php } else { ?>
-            <h2 class="text-center mb-5">Bonjour Mme/Mlle <?= $_SESSION["membre"]["prenom"] . " " . $_SESSION["membre"]["nom"] ?>, bienvenue sur votre espace personnel !</h2>
+            <h2 class="text-center mb-5">Bonjour Mme <?= $_SESSION["membre"]["prenom"] . " " . $_SESSION["membre"]["nom"] ?>, bienvenue sur votre espace personnel !</h2>
         <?php } ?>
     </div>
 
@@ -65,10 +65,10 @@ require_once("inc/header.php");
         </ul>
 
         <ul class="mt-5 list-group list-group-flush">
-            <li class="list-group-item text-center"> <h5> Mon historique de commande </h5> </li>
+            <li class="list-group-item text-center"><h5>Mon historique de commande</h5></li>
             <li class="list-group-item text-center">
-                <p> Commande n° 1 du 22/01/2020 </p>
-                <p class="badge badge-primary"> En cours de traitement </p>
+                <p>Commande n° 1 du 22/01/2020</p>
+                <p class="badge badge-primary">En cours de traitement</p>
             </li>
         </ul>
     </div>

@@ -62,7 +62,7 @@
         $total = 0;
 
         // itérer dans le panier 
-        // incrémenter le total pour chaque produit sa quantité * prix
+        // incrémenter le total pour chaque produit : sa quantité * prix
         for($i = 0; $i < count($_SESSION["panier"]["id_produit"]); $i++) {
             $total += $_SESSION["panier"]["quantite"][$i] * $_SESSION["panier"]["prix"][$i];
         }
@@ -137,17 +137,17 @@
     }
 
     //
-    // Fonction permettant de réindexer les produits dans le panier après suppresion d'un produit dans le panier
+    // Fonction permettant de réindexer les produits dans le panier après suppression d'un produit dans le panier
     //
 
-    // array_values renvoit les valeurs indéxées correctement d'un tableau
+    // array_values renvoie les valeurs indéxées correctement d'un tableau
     // on a besoin de réindéxer les valeurs du panier quand on supprime un produit
     // car si j'ai deux produits dans le panier et que je supprime de la session panier le premier
-    // je me retrouve avec un array qui a un élément indéxé à 1 alors que je souhaiterais qu'il soit réindéxé à sa juste valeur
+    // je me retrouve avec un array qui a un élément indéxé à 1 alors que je souhaiterai qu'il soit réindéxé à sa juste valeur
     // c'est à dire 0
     // car dans la page panier, pour afficher les produits dans le panier j'itère dans la session panier
     // et je commence avec $i = 0 pour récupérer le premier index jusqu'au dernier
-    // donc essentiel de réindéxer les valeur par ordre croissant après suppression d'un produit
+    // donc essentiel de réindéxer les valeurs par ordre croissant après suppression d'un produit
 
     function mettreAJourIndiceIndexProduitPanier() {
         $_SESSION["panier"]["id_produit"] = array_values($_SESSION["panier"]["id_produit"]);
@@ -175,7 +175,7 @@
 
         $pages = ceil($nbrArticles / $articlesParPage);
 
-        // Déterminer le premier articles qu'on récupère
+        // Déterminer le premier article qu'on récupère
         // et le dernier article
         $premierArticle = ($pageEnCours * $articlesParPage)  - $articlesParPage;
 

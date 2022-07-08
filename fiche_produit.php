@@ -13,7 +13,7 @@ require_once("inc/init.php");
     if(isset($_GET["idProduit"])) {
         $stmt = $pdo->query("SELECT * FROM produit WHERE id_produit = '$_GET[idProduit]' ");
     if($stmt->rowCount() <= 0) {
-           header("location:index.php"); // Si le produit n'éxiste pas en base je redirige
+           header("location:index.php"); // Si le produit n'existe pas en base je redirige
         exit();
     }  
        $produit = $stmt->fetch(PDO::FETCH_ASSOC); // Je récupère le produit

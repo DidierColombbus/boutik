@@ -6,7 +6,7 @@
     // en gros le catalogue des produits
 
     // j'aimerais afficher les différentes catégories en base
-    // et quand je clique sur une catégorie ça m'affiche tous les produits de ma catégories
+    // et quand je clique sur une catégorie ça m'affiche tous les produits de ma catégorie
 
     ////////////////////////////////////////////
     //////////// AFFICHER LA LISTE DE CATÉGORIES ////////////////
@@ -29,7 +29,7 @@
     //////////// AFFICHER LES PRODUITS DE LA CATÉGORIE ////////////////
     ////////////////////////////////////////////
 
-    // quand je clique sur une catégorie c'est à dire un lient
+    // quand je clique sur une catégorie c'est à dire un lien
     // j'ai un rechargement de page
     // je rècupère le paramètre $_GET
 

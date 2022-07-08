@@ -19,7 +19,7 @@ require_once("inc/init.php");
         // Vérifier si le pseudo a entre 3 et 20 caractères(strlen)
         if(strlen($_POST["pseudo"]) < 3 || strlen($_POST["pseudo"]) > 20) {
             $erreur .= "<div class='alert alert-danger' role='alert'>
-                Le pseudo doit faire entre 3 et 20 caractères!
+                Le pseudo doit faire entre 3 et 20 caractères !
             </div>";
         }
 
@@ -43,11 +43,11 @@ require_once("inc/init.php");
 
             // Pour éviter les erreurs au niveau de l'insert
             // on va échapper pour chaque donnée du formulaire
-            // les caractères succeptibles de provoquer des erreurs SQL *
+            // les caractères succeptibles de provoquer des erreurs SQL 
             // comme l'apostrophe grâce à la fonction php addslashes()
-            // pour chaque paramètre post je réaffecte la valeur actuelle du paramètre avec les caractèrs échapés
+            // pour chaque paramètre post je réaffecte la valeur actuelle du paramètre avec les caractères échappés
 
-            // * single quote (')
+            // single quote (')
             // double quote (")
             // backslash (\)
             // NULL
@@ -69,7 +69,7 @@ require_once("inc/init.php");
             // Si l'insert a correctement fonctionné msg de confirmation
             if($count > 0 ) {
                 $content .= "<div class='alert alert-success' role='alert'>
-                    Votre inscription a bien été réalisée!
+                    Votre inscription a bien été réalisée !
                 </div>";
 
                 $inscriptionDone = true;
@@ -97,25 +97,25 @@ require_once("inc/header.php");
                 <!-- Pseudo -->
                 <div class="form-group col-md-6">
                     <label for="pseudo">Pseudo :</label>
-                    <input type="text" class="form-control" id="pseudo" placeholder="Pseudo" name="pseudo">
+                    <input type="text" class="form-control" id="pseudo" placeholder="Pseudo" name="pseudo" required>
                 </div>
 
                 <!-- Password -->
                 <div class="form-group col-md-6">
                     <label for="password">Mot de passe :</label>
-                    <input type="password" class="form-control" id="password" placeholder="Password" name="mdp">
+                    <input type="password" class="form-control" id="password" placeholder="Mot de passe" name="mdp">
                 </div>
 
                 <!-- Name -->
                 <div class="form-group col-md-3">
                     <label for="name">Nom :</label>
-                    <input type="text" class="form-control" id="name" placeholder="Name" name="nom">
+                    <input type="text" class="form-control" id="name" placeholder="Nom" name="nom">
                 </div>
 
                 <!-- First Name -->
                 <div class="form-group col-md-3">
                     <label for="firstName">Prénom :</label>
-                    <input type="text" class="form-control" id="firstName" placeholder="First Name" name="prenom">
+                    <input type="text" class="form-control" id="firstName" placeholder="Prénom" name="prenom">
                 </div>
 
                 <!-- Email -->
@@ -147,18 +147,18 @@ require_once("inc/header.php");
 
             <div class="form-group">
                 <label for="address">Adresse</label>
-                <input type="text" class="form-control" id="address" name="adresse" placeholder="1234 Main St">
+                <input type="text" class="form-control" id="address" name="adresse" placeholder="Numéro et nom de la rue">
             </div>
 
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="inputCity">Ville</label>
-                    <input type="text" class="form-control" name="ville" id="inputCity" placeholder="Soissons">
+                    <input type="text" class="form-control" name="ville" id="inputCity" placeholder="Ville">
                 </div>
 
                 <div class="form-group col-md-6">
                     <label for="inputZip">Code postal</label>
-                    <input type="text" class="form-control" id="inputZip" name="code_postal" placeholder="02200">
+                    <input type="text" class="form-control" id="inputZip" name="code_postal" placeholder="Code postal">
                 </div>
             </div>
 

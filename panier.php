@@ -36,17 +36,17 @@ require_once("inc/init.php");
     //////////// PAYER ////////////////
     ////////////////////////////////////////////
 
-    // L'idée générale
-    // au moment du paiment je vérifie la disponibilité des produits dans le panier
+    // L'idée générale :
+    // Au moment du paiement je vérifie la disponibilité des produits dans le panier
     // Si le stock pour le produit séléctionné est >= à la quantité séléctionnée => pas d'erreur
     // Si le stock pour le produit séléctionné est < à la quantité séléctionnée => 2 scénarios possible :
-    // Soit c'est une rupture de stock dans ce cas la j'enlève le produit du panier et msg d'info qui dit le produit tata est expiré nous allons retirer de votre panier
-    // Le stock n'est pas vide du coup je mets à jour la quantité séléctionnée avec le stock dispo et msg d'info 'la quantité pour tel produit a été mise à jour'
+    // Soit c'est une rupture de stock dans ce cas là j'enlève le produit du panier et message d'info qui dit que tel produit est epuisé et que nous allons le retirer de votre panier
+    // Le stock n'est pas vide du coup je mets à jour la quantité séléctionnée avec le stock dispo et message d'info 'la quantité pour tel produit a été mise à jour'
 
     // Je récupère les produits en session
     // pour chaque produit en session je récupère le stock en BDD
     // je compare la quantité séléctionnée à ce stock
-    // je génére ou non un msg d'erreur
+    // je génére ou non un message d'erreur
 
     if($_POST && isset($_POST["payer"])) {
 
@@ -59,13 +59,12 @@ require_once("inc/init.php");
             // Si le stock pour le produit séléctionné est < à la quantité séléctionnée => 2 scénarios possible :
             if($produit["stock"] < $_SESSION["panier"]["quantite"][$i]) {
 
-                // Soit c'est une rupture de stock dans ce cas la j'enlève le produit du panier et msg d'info qui dit le produit tata est expiré nous allons retirer de votre panier
+                // Soit c'est une rupture de stock dans ce cas la j'enlève le produit du panier et msg d'info qui dit que tel produit est epuisé et que nous allons le retirer de votre panier
 
                 if($produit["stock"] <= 0) {
                     
                     $content .= "<div class=\"col-md-12 alert alert-danger\" role=\"alert\">
-                        Le stock est épuisé pour l'article " . $_SESSION["panier"]["titre"][$i] . "!
-                    </div>";
+                        Le stock est épuisé pour l'article " . $_SESSION["panier"]["titre"][$i] . " !</div>";
                     retirerProduitDuPanier($_SESSION["panier"]["id_produit"][$i]);
                     $i--;
 
@@ -91,11 +90,11 @@ require_once("inc/init.php");
         //////////// COMMANDE ////////////////
         ////////////////////////////////////////////
 
-        // si j'ai pas d'erreur (si tous les stocks sont suffisant pour la quantité séléctionnée) alors je génére une commande
+        // si je n'ai pas d'erreur (si tous les stocks sont suffisant pour la quantité sélectionnée) alors je génère une commande
 
         if(!isset($erreur)) {
 
-            // si pas de msg d'erreur insert de la commande en BDD
+            // si pas de msg d'erreur : insert de la commande en BDD
 
             // commande : id_membre, montant; date_enregistrement (NOW())
             $idMembre = $_SESSION["membre"]["id_membre"];
@@ -138,7 +137,7 @@ require_once("inc/init.php");
     // par l'internaute
     // possibilité de supprimer un produit du panier
     // possibilité de payer (de manière fictive)
-    // avant le paiment revérifier le stock des produits séléctionnés
+    // avant le paiment revérifier le stock des produits sélectionnés
 
     ////////////////////////////////////////////
     //////////// AFFICHER LES PRODUITS DANS LE PANIER ////////////////

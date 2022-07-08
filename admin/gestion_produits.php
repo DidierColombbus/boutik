@@ -42,7 +42,7 @@ require_once("../inc/init.php");
     // En dessous du tableau on va avoir un formulaire qui va permettre deux choses : ajouter un produit / modifier
 
     // Si je suis dans le cadre d'un post modification
-    // Je vais pré charger les infos du produits à modifier dans le formulaire
+    // Je vais pré charger les infos du produit à modifier dans le formulaire
 
 
     if($_POST) {
@@ -66,14 +66,15 @@ require_once("../inc/init.php");
             // var_dump($maPhoto);
             // echo '</pre>';
 
-            // COPIER LE LIEN VERS LA PHOTO EN BDD
+            // Copier le lien vers la photo en BDD
             $chemin_vers_la_photo_en_terme_durl_pour_attribut_src = URL . "photo/" . $nomPhoto;
 
             // Fichier de départ à copier
             // il correspond au fichier temporaire uploadé au niveau de l'input type file
-            // il faut récupérer le répertoire de ce fichier temporaire uploadé et le copié vers le répértoire de destination
+            // il faut récupérer le répertoire de ce fichier temporaire uploadé et le copier vers le répértoire de destination
             // tmp_name correspond au fichier chargé que l'on souhaite copier
-            // COPIER LA PHOTO SUR LE SERVEUR (préciser le bon chemin du dossier)
+
+            // Copier la photo sur le serveur (préciser le bon chemin du dossier)
             $dossier_sur_serveur_pour_enregistrer_photo = RACINE_SITE . "photo/" . $nomPhoto;
             copy($_FILES["maPhoto"]["tmp_name"], $dossier_sur_serveur_pour_enregistrer_photo);
 
@@ -85,7 +86,7 @@ require_once("../inc/init.php");
         //////////// TRAITEMENT DE L'INPUT TYPE FILE ////////////////
         ////////////////////////////////////////////
 
-        // Permet d'échapper les caractères succeptibles de crééer des erreurs sql
+        // Permet d'échapper les caractères succeptibles de créer des erreurs sql
         foreach($_POST as $indice => $valeur) {
             $_POST[$indice] = addslashes($valeur);
         }
@@ -107,7 +108,7 @@ require_once("../inc/init.php");
 
             if($count > 0) {
                 $content .= "<div class=\"col-md-12 alert alert-success\" role=\"alert\">
-                    Le produit avec la référence $_POST[reference] a bien été ajouté !
+                    Le produit avec la référence " . $_POST['reference'] . " a bien été ajouté !
                 </div>";
             }
 

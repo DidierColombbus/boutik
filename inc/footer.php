@@ -13,8 +13,8 @@
             <div class="col-md-6 mt-md-0 mt-3">
 
                 <!-- Content -->
-                <h5 class="text-white text-uppercase">Footer Content</h5>
-                <p class="text-white">Here you can use rows and columns to organize your footer content.</p>
+                <h5 class="text-white text-uppercase">Contenu pied de page</h5>
+                <p class="text-white">Ici vous pouvez utiliser des colonnes et rangées pour organiser votre pied de page.</p>
 
             </div>
             <!-- Grid column -->
@@ -25,7 +25,7 @@
             <div class="col-md-3 mb-md-0 mb-3">
 
                 <!-- Links -->
-                <h5 class="text-white text-uppercase">Links</h5>
+                <h5 class="text-white text-uppercase">Liens</h5>
 
                 <ul class="list-unstyled">
                 <li>
@@ -46,7 +46,7 @@
             <div class="col-md-3 mb-md-0 mb-3">
 
                 <!-- Links -->
-                <h5 class="text-white text-uppercase">Links</h5>
+                <h5 class="text-white text-uppercase">Liens</h5>
 
                 <ul class="list-unstyled">
                 <li>

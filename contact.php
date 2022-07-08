@@ -10,7 +10,7 @@
         $last_name = $_POST['last_name']; // Récupération du nom
         $subject = "Formulaire de contact";
         $subject2 = "Copie de votre formulaire de contact";
-        $message = $first_name . " " . $last_name . " a écrit le message suivant:" . "\n\n" . $_POST['message'];
+        $message = $first_name . " " . $last_name . " a écrit le message suivant : " . "\n\n" . $_POST['message'];
         $message2 = "Ceci est une copie de votre message " . $first_name . "\n\n" . $_POST['message'];
 
         $headers = "From:" . $from;
@@ -52,22 +52,22 @@
         <div class="form-group col-md-6">
             <input type="hidden" name="id_membre" value="<?php echo $id_membre; ?>">
             <label for="prenom">Prénom :</label>
-            <input type="text" name="first_name" class="form-control" id="prenom" aria-describedby="prenom" placeholder="Enter your first name">
+            <input type="text" name="first_name" class="form-control" id="prenom" aria-describedby="prenom" placeholder="Prénom">
         </div>
         <div class="form-group col-md-6">
             <label label for="name">Nom :</label>
-            <input type="text" name="last_name" class="form-control" id="name" placeholder="Enter your name">
+            <input type="text" name="last_name" class="form-control" id="name" placeholder="Nom">
         </div>
         <div class="form-group col-md-6">
             <label label for="name">Email :</label>
-            <input type="email" name="email" class="form-control" id="email" placeholder="Enter your email">
+            <input type="email" name="email" class="form-control" id="email" placeholder="Email">
         </div>
         <div class="form-group col-md-6">
             <label label for="name">Telephone :</label>
-            <input type="telephone" name="telephone" class="form-control" id="telephone" placeholder="Enter your telephone">
+            <input type="telephone" name="telephone" class="form-control" id="telephone" placeholder="Téléphone">
         </div>
         <div class="form-group col-md-12">
-            <label for="exampleFormControlSelect1">En quoi pouvons-nous vous aider?</label>
+            <label for="exampleFormControlSelect1">En quoi pouvons-nous vous aider ?</label>
             <select class="form-control" id="exampleFormControlSelect1" name="motive">
                 <option>J'ai une question sur une commande !</option>
                 <option>J'ai une question sur un produit !</option>
@@ -76,11 +76,11 @@
             </select>
         </div>
         <div class="form-group col-md-12">
-            <label for="message">Example textarea</label>
+            <label for="message">Votre message</label>
             <textarea class="form-control" id="message" name="message" rows="3"></textarea>
         </div>
         <div class="form-group col-md-12">
-            <button type="submit" class="btn btn-primary">Envoyer son message</button>
+            <button type="submit" class="btn btn-primary">Envoyer votre message</button>
         </div>
     </form>
 <?php } ?>

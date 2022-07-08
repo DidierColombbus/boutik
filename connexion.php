@@ -2,7 +2,7 @@
 require_once("inc/init.php");
 
 
-// SI je me déconnecte alors je vide la session membre
+// Si je me déconnecte alors je vide la session membre
 if(isset($_GET["action"]) && $_GET["action"] == "deconnexion") {
     unset($_SESSION["membre"]); // je supprime la session membre dans ma session
 }
@@ -28,7 +28,7 @@ if($_POST) {
         // Je compare le mot de passe saisi dans le formulaire avec le mot de passe crypté en base (hachage)
 
         if(password_verify($_POST["password"], $membre["mdp"])) {
-            // si password_verify renvoit true c'est que le mot de passe renseigné dans le formulaire correspond au mot de passe crypté en BDD
+            // si password_verify renvoie true c'est que le mot de passe renseigné dans le formulaire correspond au mot de passe crypté en BDD
 
             // créer une session membre avec les coordonnées du membre
             $_SESSION["membre"]["id_membre"] = $membre["id_membre"];
@@ -69,7 +69,7 @@ if($_POST) {
     } else {
 
         $content .= "<div class='alert alert-danger' role='alert'>
-            Veuillez vérifier votre pseudo!
+            Veuillez vérifier votre pseudo s'il vous plaît.
         </div>";
 
     }
@@ -94,13 +94,13 @@ require_once("inc/header.php");
     <form method="post" action="">
     <div class="form-group">
         <label for="pseudo">Pseudo :</label>
-        <input type="text" name="pseudo" class="form-control" id="pseudo" aria-describedby="pseudo" placeholder="Enter your pseudo">
+        <input type="text" name="pseudo" class="form-control" id="pseudo" aria-describedby="pseudo" placeholder="Votre pseudo">
     </div>
     <div class="form-group">
-        <label for="exampleInputPassword1">Password :</label>
-        <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        <label for="exampleInputPassword1">Mot de passe :</label>
+        <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Votre mot de passe">
     </div>
-    <button type="submit" class="btn btn-dark">Get connected</button>
+    <button type="submit" class="btn btn-dark">Me connecter</button>
     </form>
 </div>
 
