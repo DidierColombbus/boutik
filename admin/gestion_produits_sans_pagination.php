@@ -104,7 +104,7 @@ require_once("../inc/init.php");
         } else {
 
             // Si j'ai chargé une photo dans mon input type file
-            // je récupère le chemin générer vers la photo
+            // je récupère le chemin généré vers la photo
             // si je modifie le produit sans modifier la photo
             // je préserve en BDD la photo existente en BDD pour ce produit
             $cheminPhoto = ($fileLoaded) ? $chemin_vers_la_photo_en_terme_durl_pour_attribut_src : $_POST["prevPhoto"];
@@ -175,12 +175,12 @@ require_once("inc/header.php");
 
 <!-- BODY -->
 
-<h1 class='mb-5 text-center'>Bienvenue dans la partie gestion de produits de votre backOffice</h1>
+<h1 class='mb-5 text-center'>Bienvenue dans la partie gestion de produits de votre back-office</h1>
 
 
 <!-- TABLE -->
 
-<p>Vos produits en BDD:</p>
+<p>Vos produits en BDD :</p>
 
 <?php echo $content; ?>
 
@@ -197,7 +197,7 @@ require_once("inc/header.php");
     
   </thead>
   <tbody>
-        <!-- J'itère dans le fetchAll qui m'index dans un tableau multidimensionnel les arrays contenants mes produits
+        <!-- J'itère dans le fetchAll qui m'indèxe dans un tableau multidimensionnel les arrays contenants mes produits.
         Pour chaque array de produit récupéré j'itère dans les index pour récupérer les valeurs et générer un td pour chaque valeur  -->
         <?php foreach($stmt->fetchAll(PDO::FETCH_ASSOC) as $index => $produit) { ?>
             <tr>
@@ -212,7 +212,7 @@ require_once("inc/header.php");
                 <!-- Lien de modification et de suppression -->
 
                 <td> <a href="?action=modification&id_produit=<?= $produit["id_produit"]?>#ajout_modif"> Modification </a> </td>
-                <td> <a href="?action=suppression&id_produit=<?= $produit["id_produit"]?>"> Suppresion </a> </td>
+                <td> <a href="?action=suppression&id_produit=<?= $produit["id_produit"]?>"> Suppression </a> </td>
             </tr>
        <?php } ?>
 
@@ -222,7 +222,7 @@ require_once("inc/header.php");
 
 <!-- Formulaire de modification/ajout de produit -->
 
-<p id="ajout_modif">Ajouter ou Modifier des produits :</p>
+<p id="ajout_modif">Ajouter ou modifier des produits :</p>
 
 <form action="" method="POST" enctype="multipart/form-data">
     <input type="hidden" name="id_produit" value="<?php echo $idProduit; ?>">

@@ -9,7 +9,7 @@ require_once("inc/header.php");
 
 
 <!-- BODY -->
-<h1 class='mb-5 text-center'>Bienvenue dans la partie gestion des emails de votre backOffice</h1>
+<h1 class='mb-5 text-center'>Bienvenue dans la partie gestion des emails de votre back-office</h1>
 
 
 <?php
