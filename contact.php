@@ -25,8 +25,8 @@
         }
 
         // Ajout de la demande de contact en BDD
-        $count = $pdo->exec("INSERT INTO contact (id_membre, prenom, nom, email, telephone, motive, message)
-        VALUES('$_POST[id_membre]', '$_POST[prenom]', '$_POST[nom]', '$_POST[email]', '$_POST[telephone]', '$_POST[motive]', '$_POST[message]' )");
+        $count = $pdo->exec("INSERT INTO contact (prenom, nom, email, telephone, motive, message)
+        VALUES('$_POST[prenom]', '$_POST[nom]', '$_POST[email]', '$_POST[telephone]', '$_POST[motive]', '$_POST[message]' )");
 
         if($count > 0) {
             // Message de confirmation affiché à l'écran
@@ -50,13 +50,12 @@
 <?php } else { ?>
     <form class="row col-md-10" method="post">
         <div class="form-group col-md-6">
-            <input type="hidden" name="id_membre" value="<?php echo $id_membre; ?>">
             <label for="prenom">Prénom :</label>
-            <input type="text" name="first_name" class="form-control" id="prenom" aria-describedby="prenom" placeholder="Prénom">
+            <input type="text" name="prenom" class="form-control" id="prenom" aria-describedby="prenom" placeholder="Prénom">
         </div>
         <div class="form-group col-md-6">
             <label label for="name">Nom :</label>
-            <input type="text" name="last_name" class="form-control" id="name" placeholder="Nom">
+            <input type="text" name="nom" class="form-control" id="name" placeholder="Nom">
         </div>
         <div class="form-group col-md-6">
             <label label for="name">Email :</label>

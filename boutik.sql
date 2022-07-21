@@ -46,7 +46,8 @@ CREATE TABLE `contact` (
   `prenom` varchar(45) NOT NULL,
   `nom` varchar(45) NOT NULL,
   `email` varchar(45) NOT NULL,
-  `telephone` int(3) NOT NULL,
+  `telephone` varchar(10) NOT NULL,
+  `motive` enum('J''ai une question sur une commande !','J''ai une question sur un produit !','Je souhaite contacter le service après vente.','Je suis fournisseur.')
   `message` varchar(499) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -54,8 +55,8 @@ CREATE TABLE `contact` (
 -- Dumping data for table `contact`
 --
 
-INSERT INTO `contact` (`id_demande_contact`, `prenom`, `nom`, `email`, `telephone`, `message`) VALUES
-(1, 'Caracole', 'Furvent', 'furvent@golgoth.com', '0102030405', 'Ceci est mon message !');
+INSERT INTO `contact` (`id_demande_contact`, `prenom`, `nom`, `email`, `telephone`, `motive`, `message`) VALUES
+(1, 'Caracole', 'Furvent', 'furvent@golgoth.com', '0102030405', 'Je suis fournisseur.', 'Ceci est mon message !');
 
 -- --------------------------------------------------------
 
