@@ -129,10 +129,10 @@ CREATE TABLE `produit` (
 
 INSERT INTO `produit` (`id_produit`, `reference`, `categorie`, `titre`, `description`, `couleur`, `taille`, `public`, `photo`, `prix`, `stock`) VALUES
 (1, '11-d-23', 'tshirt', 'Tshirt Col V', 'Tee-shirt en coton flammé liseré contrastant pour femme', 'bleu foncé', 'M', 'f', 'http://localhost/boutique/photo/11-d-23_bleu.jpg', 2011, 101),
-(2, '66-f-15', 'tshirt', 'Tshirt Col V rouge', 'c\'est vraiment un super tshirt en soir&eacute;e !', 'rouge', 'S', 'f', 'http://localhost/boutique/photo/66-f-15_rouge.png', 151, 21),
+(2, '66-f-15', 'tshirt', 'Tshirt Col V rouge', 'C\'est vraiment un super tshirt en soir&eacute;e !', 'rouge', 'S', 'f', 'http://localhost/boutique/photo/66-f-15_rouge.png', 151, 21),
 (3, '88-g-77', 'tshirt', 'Tshirt Col rond vert', 'Il vous faut ce tshirt Made In France !!!', 'vert', 'L', 'm', 'http://localhost/boutique/photo/88-g-77_vert.png', 29, 56),
 (4, '55-b-38', 'tshirt', 'Tshirt jaune', 'le jaune reviens &agrave; la mode, non? :-)', 'jaune', 'S', 'm', 'http://localhost/boutique/photo/55-b-38_jaune.png', 20, -4),
-(5, '31-p-33', 'tshirt', 'Tshirt noir original', 'voici un tshirt noir tr&egrave;s original :p', 'noir', 'XL', 'm', 'http://localhost/boutique/photo/31-p-33_noir.jpg', 25, 73),
+(5, '31-p-33', 'tshirt', 'Tshirt noir original', 'Voici un tshirt noir tr&egrave;s original :p', 'noir', 'XL', 'm', 'http://localhost/boutique/photo/31-p-33_noir.jpg', 25, 73),
 (6, '56-a-65', 'chemise', 'Chemise Blanche', 'Les chemises c\'est bien mieux que les tshirts', 'blanc', 'L', 'm', 'http://localhost/boutique/photo/56-a-65_chemiseblanchem.jpg', 49, 66),
 (7, '63-s-63', 'chemise', 'Chemise Noir', 'Comme vous pouvez le voir c\'est une chemise noir...', 'noir', 'M', 'm', 'http://localhost/boutique/photo/63-s-63_chemisenoirm.jpg', 59, 113),
 (8, '77-p-79', 'pull', 'Pull gris', 'Pull gris pour l\'hiver', 'gris', 'XL', 'f', 'http://localhost/boutique/photo/77-p-79_pullgrism2.jpg', 79, 92);
