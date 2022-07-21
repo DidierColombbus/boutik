@@ -6,12 +6,12 @@
         
         $to = "email@example.com"; // Votre adresse mail
         $from = $_POST['email']; // L'adresse email de destination
-        $first_name = $_POST['first_name']; // Récupération du prénom
-        $last_name = $_POST['last_name']; // Récupération du nom
+        $prenom = $_POST['prenom']; // Récupération du prénom
+        $nom = $_POST['nom']; // Récupération du nom
         $subject = "Formulaire de contact";
         $subject2 = "Copie de votre formulaire de contact";
-        $message = $first_name . " " . $last_name . " a écrit le message suivant : " . "\n\n" . $_POST['message'];
-        $message2 = "Ceci est une copie de votre message " . $first_name . "\n\n" . $_POST['message'];
+        $message = $prenom . " " . $nom . " a écrit le message suivant : " . "\n\n" . $_POST['message'];
+        $message2 = "Ceci est une copie de votre message " . $prenom . "\n\n" . $_POST['message'];
 
         $headers = "From:" . $from;
         $headers2 = "From:" . $to;
@@ -25,8 +25,8 @@
         }
 
         // Ajout de la demande de contact en BDD
-        $count = $pdo->exec("INSERT INTO contact (id_membre, first_name, last_name, email, telephone, motive, message)
-        VALUES('$_POST[id_membre]', '$_POST[first_name]', '$_POST[last_name]', '$_POST[email]', '$_POST[telephone]', '$_POST[motive]', '$_POST[message]' )");
+        $count = $pdo->exec("INSERT INTO contact (id_membre, prenom, nom, email, telephone, motive, message)
+        VALUES('$_POST[id_membre]', '$_POST[prenom]', '$_POST[nom]', '$_POST[email]', '$_POST[telephone]', '$_POST[motive]', '$_POST[message]' )");
 
         if($count > 0) {
             // Message de confirmation affiché à l'écran

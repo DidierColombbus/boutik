@@ -43,18 +43,19 @@ INSERT INTO `commande` (`id_commande`, `id_membre`, `montant`, `date_enregistrem
 
 CREATE TABLE `contact` (
   `id_demande_contact` int(11) NOT NULL,
-  `first_name` varchar(45) NOT NULL,
-  `last_name` varchar(45) NOT NULL,
+  `prenom` varchar(45) NOT NULL,
+  `nom` varchar(45) NOT NULL,
   `email` varchar(45) NOT NULL,
-  `message` longtext NOT NULL
+  `telephone` int(3) NOT NULL,
+  `message` varchar(499) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `contact`
 --
 
-INSERT INTO `contact` (`id_demande_contact`, `first_name`, `last_name`, `email`, `message`) VALUES
-(1, 'Caracole', 'Furvent', 'furvent@golgoth.com', 'Ceci est mon message !');
+INSERT INTO `contact` (`id_demande_contact`, `prenom`, `nom`, `email`, `telephone`, `message`) VALUES
+(1, 'Caracole', 'Furvent', 'furvent@golgoth.com', '0102030405', 'Ceci est mon message !');
 
 -- --------------------------------------------------------
 
