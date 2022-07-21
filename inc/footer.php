@@ -56,6 +56,10 @@
                     <a href="panier.php" class="text-white">Panier</a>
                 </li>
 
+                <li>
+                    <a href="contact.php" class="text-white">Contact</a>
+                </li>
+
                 <?php if(internauteEstConnecte()) { ?>
                     <li>
                         <a href="profil.php" class="text-white">Mon profil</a>
