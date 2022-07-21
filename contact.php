@@ -37,8 +37,6 @@
 
     }
 
-    $id_membre = (isset($_SESSION["membre"]["id_membre"])) ? $_SESSION["membre"]["id_membre"] : NULL;
-
     require_once("inc/header.php");
 ?>
 
