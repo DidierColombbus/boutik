@@ -24,7 +24,7 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
-                        <a class="nav-link" href="index.php">Boutique <span class="sr-only">(actuel)</span></a>
+                        <a class="nav-link" href="index.php">Boutique</a>
                     </li>
 
                     <!-- Si je ne suis pas connecté j'affiche les pages connexion/inscription -->

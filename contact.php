@@ -17,7 +17,7 @@
         $headers2 = "From:" . $to;
         // Fonction prédéfinie PHP permettant d'envoyer un email
         mail($to,$subject,$message,$headers); // envoi du mail au propriétaire du site
-        mail($from,$subject2,$message2,$headers2); // envoi une copie du message à l'envoyeur
+        mail($from,$subject2,$message2,$headers2); // envoi d'une copie du message à l'envoyeur
         // Possibilité d'utiliser header('Location: thank_you.php'); pour rediriger vers une autre page.
 
         foreach($_POST as $indice => $valeur) {
@@ -63,7 +63,7 @@
             <input type="email" name="email" class="form-control" id="email" placeholder="Email">
         </div>
         <div class="form-group col-md-6">
-            <label label for="name">Telephone :</label>
+            <label label for="name">Téléphone :</label>
             <input type="telephone" name="telephone" class="form-control" id="telephone" placeholder="Téléphone">
         </div>
         <div class="form-group col-md-12">
