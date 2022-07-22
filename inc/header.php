@@ -11,7 +11,7 @@
 </head>
 <body>
 
-    <div class="container-flud">
+    <div class="container-fluid">
 
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark justify-content-start">
             <a class="navbar-brand" href="index.php">
