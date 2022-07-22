@@ -25,8 +25,8 @@
         }
 
         // Ajout de la demande de contact en BDD
-        $count = $pdo->exec("INSERT INTO contact (prenom, nom, email, telephone, motive, message)
-        VALUES('$_POST[prenom]', '$_POST[nom]', '$_POST[email]', '$_POST[telephone]', '$_POST[motive]', '$_POST[message]' )");
+        $count = $pdo->exec("INSERT INTO contact (prenom, nom, email, telephone, sujet, message)
+        VALUES('$_POST[prenom]', '$_POST[nom]', '$_POST[email]', '$_POST[telephone]', '$_POST[sujet]', '$_POST[message]' )");
 
         if($count > 0) {
             // Message de confirmation affiché à l'écran
@@ -65,7 +65,7 @@
         </div>
         <div class="form-group col-md-12">
             <label for="exampleFormControlSelect1">En quoi pouvons-nous vous aider ?</label>
-            <select class="form-control" id="exampleFormControlSelect1" name="motive">
+            <select class="form-control" id="exampleFormControlSelect1" name="sujet">
                 <option>J'ai une question sur une commande !</option>
                 <option>J'ai une question sur un produit !</option>
                 <option>Je souhaite contacter le service après vente.</option>

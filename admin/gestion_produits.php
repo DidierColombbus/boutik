@@ -151,6 +151,8 @@ require_once("../inc/init.php");
 //////////// Récupérer en BDD les produits ////////////////
 ////////////////////////////////////////////
 
+// le dernier chiffre de $stmt correspond au nombre d'éléments affichés pour la pagination, ici 3
+
 $stmt = $pdo->query("SELECT * FROM produit LIMIT $elementsPourLaPagination[premierArticle], 3");
 // echo '<pre>';
 // var_dump($stmt->fetchAll(PDO::FETCH_ASSOC));
