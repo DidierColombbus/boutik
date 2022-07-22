@@ -12,7 +12,7 @@
 
     <div class="container-fluid">
 
-        <nav class="navbar navbar-expand-lg navbar-dark bg-secondary justify-content-end">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-secondary justify-content-end p-1">
             <a class="navbar-brand" href="index.php">
                 <img src="../photo/kisspng-the-boss-baby-film-dreamworks-animation-comedy-boss-5abb4dc7f20ab3.1393930015222245839914.png" width="100" height="100" class="d-inline-block align-top" alt="">
             <p class="d-inline-block align-center ">Espace administrateur</p> 
