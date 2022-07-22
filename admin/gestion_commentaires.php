@@ -51,7 +51,7 @@ require_once("inc/header.php");
                         <td><?php echo $valeur; ?> </td>
                         
                         <?php } ?>
-                        <td> <a href="?action=suppression&id_demande_contact=<?= $contact["id_demande_contact"]?>"> Suppresion </a> </td>
+                        <td> <a href="?action=suppression&id_demande_contact=<?= $contact["id_demande_contact"]?>"> Suppression </a> </td>
 
             </tr>
        <?php } ?>

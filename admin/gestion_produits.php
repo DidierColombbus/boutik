@@ -297,19 +297,19 @@ require_once("inc/header.php");
                 <input type="radio" id="public_m" name="public" class="custom-control-input" value="m" checked>
                 <label class="custom-control-label" for="public_m">Masculin</label>
             </div>
-        </div>
-        <div class="form-group col-md-2">
-            <label for="public_f" style="color:transparent">Public</label>
+            <label for="public_f">Public</label>
             <div class="custom-control custom-radio">
                 <input type="radio" id="public_f" name="public" class="custom-control-input" value="f">
                 <label class="custom-control-label" for="public_f">Féminin</label>
             </div>
         </div>
         
+        
+        <br>
         <div class="custom-file mb-5">
-            <input type="file" class="custom-file-input" id="maPhoto" name="maPhoto">
             <label class="custom-file-label" for="maPhoto">Choisir une photo</label>
-
+            <br>
+            <input type="file" class="custom-file-input mt-1" id="maPhoto" name="maPhoto">
             <!-- Si je suis dans le cadre d'une modification j'affiche l'img actuelle -->
             <?php if(isset($_GET["action"]) && $_GET["action"] == "modification") { ?>
                 <img class="mt-1" style="width:75px" src="<?= $photo; ?>" alt="<?= $titre; ?>" title="<?= $description; ?>">

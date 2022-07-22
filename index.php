@@ -15,12 +15,12 @@
     // Récupérer les catégories
     $stmt = $pdo->query("SELECT DISTINCT(categorie) FROM produit");
     // itérer à l'intérieur et générer une liste
-    $content .= (!isset($_GET["categorie"])) ? "<h3 class='mb-5'> Veuillez choisir une catégorie </h3>" : "";
+    $content .= (!isset($_GET["categorie"])) ? "<h3 class='mb-5 text-center display-5'> Veuillez choisir une catégorie </h3>" : "";
     $content .= "<div class='w-100'> </div>";
     $content .= " <div class='col-md-6 col-12 mb-3 justify-content-center'>";
     $content .= "<ul class='list-group text-center display-5'>";
     while($categorie = $stmt->fetch(PDO::FETCH_ASSOC)) {
-       $content .= " <li class='list-group-item'> <a class='text-dark' href='?categorie=$categorie[categorie]'>  $categorie[categorie] </a> </li>";
+       $content .= " <li class='list-group-item'> <a class='text-dark text-capitalize' href='?categorie=$categorie[categorie]'>  $categorie[categorie] </a> </li>";
     }
     $content .= "</ul>";
     $content .= "</div>";
