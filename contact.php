@@ -2,6 +2,8 @@
 
     require_once("inc/init.php");
 
+    // La fonction prédéfinie PHP mail() est inactive en localhost.
+
     if($_POST) {
         
         $to = "email@example.com"; // Votre adresse mail
