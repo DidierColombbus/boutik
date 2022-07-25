@@ -14,6 +14,9 @@ SET time_zone = "+00:00";
 -- Database: `boutik`
 --
 
+CREATE DATABASE IF NOT EXISTS `boutik` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `boutik`;
+
 -- --------------------------------------------------------
 
 --
@@ -47,7 +50,7 @@ CREATE TABLE `contact` (
   `nom` varchar(45) NOT NULL,
   `email` varchar(45) NOT NULL,
   `telephone` varchar(10) NOT NULL,
-  `sujet` enum('J''ai une question sur une commande !','J''ai une question sur un produit !','Je souhaite contacter le service après vente.','Je suis fournisseur.')
+  `sujet` enum('J''ai une question sur une commande !','J''ai une question sur un produit !','Je souhaite contacter le service après vente.','Je suis fournisseur.'),
   `message` varchar(499) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
