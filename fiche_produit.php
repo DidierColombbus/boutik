@@ -54,7 +54,7 @@ require_once("inc/init.php");
                     </select>
                 </li>
      
-                <input class="btn btn-outline-secondary mt-5" disabled type="submit" value="Ajouter au Panier" name="ajout_panier" style="width:100%" id="addCart">
+                <input class="btn btn-outline-secondary mt-5" disabled type="submit" value="Ajouter au panier" name="ajout_panier" style="width:100%" id="addCart">
 
             </form>
 
