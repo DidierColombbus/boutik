@@ -8,7 +8,7 @@ $pdo = new PDO('mysql:host=localhost;dbname=boutik','root','', array(PDO::ATTR_E
 // variable globale pour rendre le html dynamique, marche pour echo
 $content = "";
 
-// Ouverture d'une sessions
+// Ouverture d'une session
 session_start();
 
 // définition de constantes
