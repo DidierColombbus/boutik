@@ -26,8 +26,8 @@ require_once("../inc/init.php");
     }
     
     // Afficher les données dans un tableau
-    // Faudra rajouter deux colonnes (modification/suppresion)
-    // 2 événements post : modif et suppresion
+    // Faudra rajouter deux colonnes (modification/suppression)
+    // 2 événements post : modif et suppression
 
     // En dessous du tableau on va avoir un formulaire qui va permettre deux choses : ajouter un produit / modifier
 

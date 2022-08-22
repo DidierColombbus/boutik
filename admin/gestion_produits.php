@@ -36,8 +36,8 @@ require_once("../inc/init.php");
 
     
     // Afficher les données dans un tableau
-    // Faudra rajouter deux colonnes (modification/suppresion)
-    // 2 évènements post : modif et suppresion
+    // Faudra rajouter deux colonnes (modification/suppression)
+    // 2 évènements post : modif et suppression
 
     // En dessous du tableau on va avoir un formulaire qui va permettre deux choses : ajouter un produit / modifier
 
@@ -224,7 +224,7 @@ require_once("inc/header.php");
                 <!-- Lien de modification et de suppression -->
 
                 <td> <a href="?action=modification&id_produit=<?= $produit["id_produit"]?>#ajout_modif"> Modification </a> </td>
-                <td> <a href="?action=suppression&id_produit=<?= $produit["id_produit"]?>"> Suppresion </a> </td>
+                <td> <a href="?action=suppression&id_produit=<?= $produit["id_produit"]?>"> Suppression </a> </td>
             </tr>
        <?php } ?>
 
