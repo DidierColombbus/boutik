@@ -15,8 +15,8 @@ session_start();
 define("RACINE_SITE", $_SERVER["DOCUMENT_ROOT"] . "/boutik/");
 define("URL", "http://" .$_SERVER["HTTP_HOST"] . "/boutik/");
 
-// echo 'Le dossier vers notre site est :' . RACINE_SITE . '<br>';
-// echo 'L URL vers notre site est :' . URL;
+// echo 'Le dossier vers notre site est : ' . RACINE_SITE . '<br>';
+// echo 'L\' URL vers notre site est : ' . URL;
 
 require_once("fonction.php");
 
