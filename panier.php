@@ -7,7 +7,7 @@ require_once("inc/init.php");
 
 
     if(isset($_GET["action"]) && $_GET["action"] == "suppressionArticle") {
-        $content .= "<div class='col-md-12 mb-5'> <span class='badge badge-dark'>
+        $content .= "<div class='col-md-12 mb-5'> <span class='badge bg-dark'>
         Votre article a bien été retiré du panier !</span> </div>";
         retirerProduitDuPanier($_GET["id_produit"]);
         mettreAJourIndiceIndexProduitPanier();
@@ -18,7 +18,7 @@ require_once("inc/init.php");
     ////////////////////////////////////////////
 
     if(isset($_GET["action"]) && $_GET["action"] == "viderPanier") {
-        $content .= "<div class='col-md-12 mb-5'> <span class='badge badge-dark'>Panier vidé !</span> </div>";
+        $content .= "<div class='col-md-12 mb-5'> <span class='badge bg-dark'>Panier vidé !</span> </div>";
         unset($_SESSION["panier"]);
     }
 
@@ -163,7 +163,7 @@ require_once("inc/init.php");
     // Lien pour vider le panier
     if(!empty($_SESSION["panier"]["id_produit"])) {
         $content .= "<div class='col-md-12 mb-5'>";
-        $content .= "<a href='?action=viderPanier' class='badge badge-danger'> Vider le Panier </a>";
+        $content .= "<a href='?action=viderPanier' class='badge bg-danger'> Vider le Panier </a>";
         $content .= "</div>";
 
     }
@@ -189,7 +189,7 @@ require_once("inc/init.php");
     $content .= "</tbody> </table>";
 
     if(isset($_POST["ajout_panier"])) {
-        $content .= "<div class='col-md-12'> <a href='index.php?categorie=$_POST[categorie]' class='badge badge-dark text-white'>Retourner à la catégorie $_POST[categorie]</a> </div>";
+        $content .= "<div class='col-md-12'> <a href='index.php?categorie=$_POST[categorie]' class='badge bg-dark text-white'>Retourner à la catégorie $_POST[categorie]</a> </div>";
     }
 
 
@@ -232,7 +232,7 @@ require_once("inc/init.php");
             // Fin de la table
             $content .= "</tbody> </table>";
             if(isset($_POST["ajout_panier"])) {
-                $content .= "<div class='col-md-12'> <a href='index.php?categorie=$_POST[categorie]' class='badge badge-dark text-white'>Retourner à la catégorie $_POST[categorie]</a> </div>";
+                $content .= "<div class='col-md-12'> <a href='index.php?categorie=$_POST[categorie]' class='badge bg-dark text-white'>Retourner à la catégorie $_POST[categorie]</a> </div>";
             }
             ////////////////////////////////////////////
             //////////// AFFICHER LE BOUTTON POUR PAYER ////////////////
