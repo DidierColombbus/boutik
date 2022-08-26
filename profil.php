@@ -57,7 +57,7 @@ require_once("inc/header.php");
             <?php while($commande = $stmt->fetch(PDO::FETCH_ASSOC)) { ?>
                 <li class="list-group-item text-center">
                     <p> Commande n° <?php echo $commande["id_commande"] . " du " . $commande["date_enregistrement"];  ?> </p>
-                    <p class="badge badge-primary"> <?php echo $commande["etat"]; ?> </p>
+                    <p class="badge bg-primary"> <?php echo $commande["etat"]; ?> </p>
                 </li>
             <?php } ?>
 
@@ -68,7 +68,7 @@ require_once("inc/header.php");
             <li class="list-group-item text-center"><h5>Mon historique de commande</h5></li>
             <li class="list-group-item text-center">
                 <p>Commande n° 1 du 22/01/2020</p>
-                <p class="badge badge-primary">En cours de traitement</p>
+                <p class="badge bg-primary">En cours de traitement</p>
             </li>
         </ul>
     </div>

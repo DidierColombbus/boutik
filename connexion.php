@@ -43,7 +43,7 @@ if($_POST) {
 
             // Si je suis admin je suis redirigé directement vers le backoffice
             if($_SESSION["membre"]["statut"] == 1) {
-                // Redirection vers la page profil
+                // Redirection vers la page profil de l'administrateur
                 header("location:admin/index.php");
                 exit();
             } else {
