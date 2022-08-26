@@ -17,7 +17,7 @@
     // itérer à l'intérieur et générer une liste
     $content .= (!isset($_GET["categorie"])) ? "<h3 class='mb-5 text-center display-5 shadow p-1 mb-5 bg-body rounded'> Veuillez choisir une catégorie </h3>" : "";
     $content .= "<div class='w-100'> </div>";
-    $content .= " <div class='col-md-6 col-12 mb-3 justify-content-center shadow p-3 mb-5 bg-body rounded'>";
+    $content .= "<div class='col-md-6 col-12 mb-3 justify-content-center shadow p-3 mb-5 bg-body rounded'>";
     $content .= "<ul class='list-group text-center display-5'>";
     while($categorie = $stmt->fetch(PDO::FETCH_ASSOC)) {
        $content .= " <li class='list-group-item'> <a class='text-dark text-capitalize' href='?categorie=$categorie[categorie]'>  $categorie[categorie] </a> </li>";
