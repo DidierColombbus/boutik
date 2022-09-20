@@ -44,7 +44,7 @@
         while($produit = $r->fetch(PDO::FETCH_ASSOC)) {
             // Génération de card boostrap à chaque fois qu'un produit est récupéré
             $content .= "<div class='col-md-6 col-lg-3 col-sm-12 pl-2 pr-2 pb-2'> <div class='card col-md-12 w-100 shadow-sm p-3 mb-5 bg-body rounded'>
-            <a href='fiche_produit.php?idProduit=$produit[id_produit]' target='_blank'><img style='cursor:pointer' class='card-img-top' src='$produit[photo]' alt='$produit[titre]' title='$produit[description]'></a>
+            <a href='fiche_produit.php?idProduit=$produit[id_produit]' target='_blank'><img style='cursor:pointer' class='card-img-top' src='photo/$produit[photo]' alt='$produit[titre]' title='$produit[description]'></a>
                 <div class='card-body '>
                     <h5 class='text-center card-title'>$produit[titre]</h5>
                     <p class='text-center card-text'>" . substr($produit["description"], 0, 35) . "..." . "</p>

@@ -215,7 +215,7 @@ require_once("inc/header.php");
             <tr>
                 <?php foreach($produit as $index => $valeur) { 
                     if($index == 'photo') { ?>
-                        <td> <img style="width:50px" src="<?= $valeur; ?>" alt=""> </td>
+                        <td> <img style="width:50px" src="../photo/<?php echo $valeur; ?>" alt=""> </td>
                     <?php } else { ?>
                         <td> <?php echo $produit[$index];  ?> </td>
                     <?php } ?>
